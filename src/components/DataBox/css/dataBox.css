@@ -1,0 +1,11 @@
+.main-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  position: absolute;
+  left: 463px;
+  top: 163px;
+}/*# sourceMappingURL=dataBox.css.map */

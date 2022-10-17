@@ -1,0 +1,80 @@
+.filter-box {
+  box-sizing: border-box;
+  position: absolute;
+  width: 346px;
+  height: 392px;
+  left: 77px;
+  top: 163px;
+  background: #FAFAFA;
+  border: 1px solid #AAB0BE;
+  border-radius: 8px;
+}
+
+.search-box {
+  box-sizing: border-box;
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 160px 12px 24px;
+  gap: 16px;
+  margin: 20px 20px 0px 20px;
+  width: 298px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 16px;
+}
+
+.filter-choice {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.status-radio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 69px;
+  height: 69px;
+}
+.status-radio li {
+  list-style: none;
+  display: flex;
+}
+
+.filter-signal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+}
+.filter-signal .signal-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 55px;
+  height: 72px;
+}
+.filter-signal .signal-checkbox li {
+  list-style: none;
+  display: flex;
+}
+
+.source-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+}
+.source-filter h4 {
+  padding: 0 20px;
+}/*# sourceMappingURL=filter.css.map */
