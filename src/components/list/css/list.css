@@ -1,7 +1,7 @@
 .container {
   border: 1px solid black;
   border-radius: 10px;
-  width: 1160px;
+  width: 1140px;
   padding: 20px;
 }
 
@@ -11,11 +11,10 @@ table {
   padding: 10px;
 }
 
-.table-heading, .table-data {
+tr {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  gap: 150px;
   text-align: left;
 }
 

@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 
 .data-card {
@@ -9,6 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   background-color: #ffbcbc;
+  height: 267px;
   border-radius: 20px;
   border: 1px solid #AAB0BE;
 }
@@ -20,7 +22,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  gap: 22px;
+  gap: 29px;
 }
 
 .profile {

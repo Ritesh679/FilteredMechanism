@@ -72,9 +72,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  gap: 16px;
+  padding: 10px 0 0 0;
 }
 .source-filter h4 {
-  padding: 0 20px;
+  padding: 10px 20px 0 20px;
+}
+.source-filter .source {
+  position: relative;
+  padding: 10px;
+  margin-left: 20px;
+  width: 298px;
+  height: 43px;
+  border: 1px solid #CCCCCC;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+.source-filter .source-text {
+  color: red;
+  font-size: 16px;
+  font-weight: 400;
 }/*# sourceMappingURL=filter.css.map */

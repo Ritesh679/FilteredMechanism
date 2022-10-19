@@ -22,7 +22,8 @@ button{
   width: 63px;
   height: 36px;
 
-  background: #D1E4FF;
+  background: #0F60DA
+  ;
   border-radius: 8px 0px 0px 8px;
 
   flex: none;
@@ -48,13 +49,10 @@ border-radius: 0px 8px 8px 0px;
 .main-body{
   display: flex;
   position: absolute;
-  width: 1546px;
+  width: 1400px;
   height: 546px;
   left: 77px;
   /* top: px; */
-}
-button.active{
-  background-color: red;
 }
 button:hover{
   cursor: pointer;

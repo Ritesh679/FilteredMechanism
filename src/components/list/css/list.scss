@@ -1,7 +1,7 @@
 .container{
     border:1px solid black;
     border-radius: 10px;    
-    width: 1160px;
+    width: 1140px;
     padding: 20px;
 }
 table{
@@ -10,14 +10,13 @@ table{
     padding: 10px;
 }
 
-
-.table-heading,.table-data{
+tr{
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    gap: 150px;
     text-align: left;
 }
+
 .status-btn{
     padding:10px 20px;
     border-radius: 10px;
