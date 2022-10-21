@@ -1,4 +1,4 @@
-.card-list{
+.card-list {
   display: flex;
   align-items: flex-start;
   padding: 10px;
@@ -6,13 +6,13 @@
   position: absolute;
   width: 119px;
   height: 36px;
-  left: 1504px; 
+  left: 1504px;
   top: 50px;
 }
-button{
-  border:none;
+button {
+  border: none;
 }
-.card{
+.card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,31 +22,29 @@ button{
   width: 63px;
   height: 36px;
 
-  background: #0F60DA
-  ;
+  /* background: #0f60da; */
   border-radius: 8px 0px 0px 8px;
 
   flex: none;
   order: 0;
   flex-grow: 0;
 }
-.list{
+.list {
   display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 8px 16px;
-gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
 
-width: 56px;
-height: 36px;
+  width: 56px;
+  height: 36px;
 
-background: #D1E4FF;
-border-radius: 0px 8px 8px 0px;
-
+  /* background: #D1E4FF; */
+  border-radius: 0px 8px 8px 0px;
 }
 
-.main-body{
+.main-body {
   display: flex;
   position: absolute;
   width: 1400px;
@@ -54,6 +52,6 @@ border-radius: 0px 8px 8px 0px;
   left: 77px;
   /* top: px; */
 }
-button:hover{
+button:hover {
   cursor: pointer;
 }
