@@ -1,18 +1,12 @@
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-}
-
 .data-card {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   background-color: #ffbcbc;
+  padding: 0 20px;
   height: 267px;
   border-radius: 20px;
-  border: 1px solid #AAB0BE;
+  border: 1px solid #aab0be;
 }
 
 .main-data {
@@ -39,7 +33,7 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: #C4C4C4;
+  background: #c4c4c4;
 }
 .profile .text {
   width: 60px;
@@ -68,8 +62,8 @@
   right: 74%;
   top: 0.39%;
   bottom: 78.99%;
-  background: #5FDBA7;
-  border: 1px solid #5FDBA7;
+  background: #5fdba7;
+  border: 1px solid #5fdba7;
   overflow: hidden;
 }
 

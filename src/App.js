@@ -4,13 +4,15 @@ import FilterBox from "./components/filterComponent/filter";
 import DataBox from "./components/DataBox/DataBox";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { isImgUrl } from "./util";
 
 function App() {
   const [data, setData] = useState([]);
-  const [status, setStatus] = useState("all");
+  const [status, setStatus] = useState(null);
   const [signal, setSignal] = useState([]);
   const [value, setValue] = useState("Card");
   const [select, setSelect] = useState("");
+  const [searchValue, setSearchValue] = useState("");
 
   const fetchData = async () => {
     return await axios
@@ -22,19 +24,34 @@ function App() {
 
   const searchHandler = (event) => {
     const value = event.target.value;
-    console.log(value);
-    let variable = data.filter((d) =>
-      d.firstName.toLowerCase().includes(value)
-    );
-    setData(variable);
-    console.table(variable);
+    setSearchValue(value);
   };
-  const filteredData =
-    status === "Active"
-      ? data.filter((d) => d.status === "active")
-      : status === "Inactive"
-      ? data.filter((d) => d.status === "inactive")
-      : data;
+  console.log(searchValue);
+  let filteredData = [...data];
+
+  if (status) {
+    filteredData = filteredData.filter((d) => d.status === status);
+  }
+  if (signal && signal.length > 0) {
+    filteredData = filteredData.filter((d) =>
+      signal.includes(d.signal === 3 ? "solid" : d.signal > 3 ? "good" : "ok")
+    );
+  }
+  if (searchValue && searchValue.trim !== "") {
+    filteredData = filteredData.filter((d) =>
+      d.firstName.toLowerCase().includes(searchValue)
+    );
+  }
+
+  if (select) {
+    filteredData = filteredData.filter((d) => {
+      let x = d.photos.map((p) => p.source);
+      let y = d.photos.filter((p) => p.source === select);
+      if (x.includes(select)) {
+        return d;
+      }
+    });
+  }
 
   const selectHandler = (select) => {
     setSelect(select);
@@ -43,18 +60,16 @@ function App() {
     setStatus(status);
   };
 
-  const signalHandler = (event) => {
-    const { value, checked } = event.target;
-    console.log(`${value} is ${checked}`);
-    if (checked) setSignal([...signal, value]);
-    else setSignal(signal.filter((event) => event !== value));
-    console.log(signal);
+  const signalHandler = (name, checked) => {
+    console.log(name + " " + checked);
+    checked && !signal.includes(name) && setSignal([...signal, name]);
+    !checked && setSignal(signal.filter((s) => s !== name));
   };
+  console.log(signal);
 
   useEffect(() => {
-    // searchHandler();
     fetchData();
-  }, [filteredData, signal]);
+  }, []);
 
   return (
     <div className="App">

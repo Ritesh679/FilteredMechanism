@@ -9,16 +9,7 @@ const DataBox = ({ data, value, query, image_source }) => {
       {value === "List" && <List data={data} query={query} />}
       {value === "Card" &&
         data.map((d, key) => (
-          <Card
-            key={key}
-            fName={d.firstName}
-            lName={d.lastName}
-            signal={d.signal}
-            status={d.status}
-            photo={d.photos}
-            query={query}
-            image_source={image_source}
-          />
+          <Card key={key} data={d} query={query} image_source={image_source} />
         ))}
     </div>
   );

@@ -15,7 +15,8 @@ export default function FilterBox(props) {
   };
 
   const checkboxHandler = (event) => {
-    props.signalHandler(event);
+    const { name, checked } = event.target;
+    props.signalHandler(name, checked);
   };
 
   return (
@@ -37,7 +38,7 @@ export default function FilterBox(props) {
                 type="radio"
                 id="active"
                 name="active_status"
-                value="Active"
+                value="active"
                 onChange={handleActiveStatus}
               />
               <label htmlFor="active">Active</label>
@@ -48,21 +49,10 @@ export default function FilterBox(props) {
                 type="radio"
                 id="inactive"
                 name="active_status"
-                value="Inactive"
+                value="inactive"
                 onChange={handleActiveStatus}
               />
               <label htmlFor="inactive">Inactive</label>
-              <br />
-            </li>
-            <li>
-              <input
-                type="radio"
-                id="all"
-                name="active_status"
-                value="All"
-                onChange={handleActiveStatus}
-              />
-              <label htmlFor="all">All</label>
               <br />
             </li>
           </div>
@@ -75,8 +65,9 @@ export default function FilterBox(props) {
               <li>
                 <input
                   type="checkbox"
-                  name="filter-by"
+                  name="solid"
                   value="Solid"
+                  // checked={checkbox.categories.solid}
                   onChange={(e) => checkboxHandler(e)}
                 />
                 <label htmlFor="solid">Solid</label>
@@ -84,18 +75,20 @@ export default function FilterBox(props) {
               <li tabIndex={2}>
                 <input
                   type="checkbox"
-                  name="filter-by-good"
+                  name="good"
                   value="Good"
-                  onChange={(e) => checkboxHandler(e)}
+                  // checked={checkbox.categories.good}
+                  onChange={checkboxHandler}
                 />
                 <label htmlFor="good">Good</label>
               </li>
               <li tabIndex={3}>
                 <input
                   type="checkbox"
-                  name="filter-by"
+                  name="ok"
                   value="Ok"
-                  onChange={(e) => checkboxHandler(e)}
+                  // checked={checkbox.categories.ok}
+                  onChange={checkboxHandler}
                 />
                 <label htmlFor="Ok">Ok</label>
               </li>
